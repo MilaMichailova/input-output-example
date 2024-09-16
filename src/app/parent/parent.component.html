@@ -1,0 +1,12 @@
+<p>дочерний компонент</p>
+<app-child
+  [(title)]="titleToChild"
+  (generateNewTitle)="generateRandomTitle()"
+></app-child>
+
+<p>родительский компонент</p>
+<h1>{{ titleToChild }}</h1>
+
+<button (click)="generateRandomTitle()">
+  Сгенерировать заголовок родитель
+</button>
